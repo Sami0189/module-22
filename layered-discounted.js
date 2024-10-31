@@ -23,12 +23,18 @@ function layeredDiscountedTotal(quantity){
         return total;
     }
     else{
-        const first100Total = 100 * first100Price;
-        const second100Total = 100 * second100price;
-        const remainingQuantity = quantity-200;
-        const remainimgTotal = remainingQuantity + above200Price;
-        const total= first100Total + second100Total + remainimgTotal;
+        const first100Total = 100 * first100Price; // Price = 10000
+        const second100Total = 100 * second100price; // Price = 9000
+        const remainingQuantity = quantity-200; // Remaining = 10;
+        const remainimgTotal = remainingQuantity * above200Price; // Price = 700
+        const total= first100Total + second100Total + remainimgTotal; // Total Price = 19700
         return total;
     }
 } const total = layeredDiscountedTotal(210);
 console.log(total);
+
+
+const sami = [4,5,76,87,98,89];
+
+const highest = Math.max(...sami);
+console.log(highest)

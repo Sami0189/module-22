@@ -4,22 +4,20 @@
 // const max = Math.max(...heights);
 // console.log(max);
 
+// const heights = [43,65,76,23,73,71];
 
-const heights = [43,65,76,23,73,71];
+// function getMax(numbers){
+//     let max = numbers[0];//index 0 = 43;ata ka max dora hoicha
+//    for(const num of numbers){
+//      if(num>max){
+//      max = num;
+//      }
+//     }
+//     return max;
+// }
 
-function getMax(numbers){
-    let max = numbers[0];//index 0 = 43;ata ka max dora hoicha
-   for(const num of numbers){
-     if(num>max){
-     max = num;
-     }
-    }
-    return max;
-}
-
-const max = getMax(heights);
-console.log(max);
-
+// const max = getMax(heights);
+// console.log(max);
 
 /**
  * The Condition: if (num > max)
@@ -38,18 +36,30 @@ console.log(max);
 .When num is 76, max gets updated to 76.
  */
 
+// const smallest = [43,65,76,23,73,71];
 
+// function theSmallest (numbers){
+//     let min = numbers[0];
+//     for(const num of numbers){
+//         if(num<min){
+//             min = num;
+//         }
+//     }
+//     return min;
+// }
+//  const min = theSmallest(smallest);
+//  console.log(min);
 
-const smallest = [43,65,76,23,73,71];
+const heights2 = ["fahim", "rahim", "opu", "rafi", "robin",'oo'];
 
-function theSmallest (numbers){
-    let min = numbers[0];
-    for(const num of numbers){
-        if(num<min){
-            min = num;
-        }
+function theSmallest(numbers) {
+  let firstNumber = numbers[0];
+  for (const num of numbers) {
+    if (num.length < firstNumber.length) {
+      firstNumber = num;
     }
-    return min;
+  }
+  return firstNumber;
 }
- const min = theSmallest(smallest);
- console.log(min);
+const lengthOfArray = theSmallest(heights2);
+console.log(lengthOfArray);
